@@ -10,7 +10,7 @@ export default function Hero() {
       {/* Background image */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/hero-bg.png"
+        src="/hero-bg.webp"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
@@ -165,7 +165,7 @@ export default function Hero() {
                   transformStyle: "preserve-3d",
                 }}
               >
-                <GradedCard image="/cards/image12.png" />
+                <GradedCard image="/cards/card12.webp" />
               </div>
             </motion.div>
 

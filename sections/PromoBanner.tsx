@@ -114,7 +114,7 @@ export default function PromoBanner() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/shirt.png"
+              src="/shirt.webp"
               alt="Pullculture apparel"
               className="absolute left-1/2 -translate-x-1/2 -top-10 sm:-top-16 lg:-top-24 h-[170%] sm:h-[180%] lg:h-[190%] w-auto max-w-none object-contain object-top drop-shadow-2xl"
               loading="lazy"

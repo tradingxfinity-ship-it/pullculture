@@ -20,7 +20,7 @@ export default function GradedCard({
   subtitle = "FOUNDER • FLAGSHIP",
   year = "2026 PULLCULTURE SELECT",
   accent = "#FFFFFF",
-  image = "/cards/image6.png",
+  image = "/cards/card6.webp",
   className = "",
 }: GradedCardProps) {
   return (

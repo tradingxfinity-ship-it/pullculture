@@ -14,10 +14,19 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
+const SITE_URL = "https://pullculture.io";
+const TITLE = "Pullculture — Culture Through Collecting";
+const DESCRIPTION =
+  "Your daily destination for sports cards, Pokémon, One Piece, TCG investing, grading news, hobby culture, and market insights.";
+
 export const metadata: Metadata = {
-  title: "Pullculture — Culture Through Collecting",
-  description:
-    "Your daily destination for sports cards, Pokémon, One Piece, TCG investing, grading news, hobby culture, and market insights.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TITLE,
+    template: "%s — Pullculture",
+  },
+  description: DESCRIPTION,
+  applicationName: "Pullculture",
   keywords: [
     "trading cards",
     "sports cards",
@@ -28,11 +37,36 @@ export const metadata: Metadata = {
     "hobby news",
     "collectibles",
   ],
+  authors: [{ name: "Pullculture" }],
+  creator: "Pullculture",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Pullculture — Culture Through Collecting",
-    description:
-      "Premium destination for trading card culture, grading news, and market trends.",
     type: "website",
+    url: SITE_URL,
+    siteName: "Pullculture",
+    title: TITLE,
+    description: DESCRIPTION,
+    locale: "en_US",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Pullculture — Culture Through Collecting",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/og.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

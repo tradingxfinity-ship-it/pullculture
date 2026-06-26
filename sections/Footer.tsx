@@ -42,14 +42,14 @@ export default function Footer() {
     >
       <div className="absolute inset-0 noise-overlay opacity-50" />
       <div className="relative mx-auto max-w-[1480px] px-6 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8">
           {/* Brand column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-4"
+            className="col-span-2 lg:col-span-4"
           >
             <div className="flex flex-col leading-none">
               <span className="text-display text-[36px] lg:text-[48px] tracking-tightest font-black">

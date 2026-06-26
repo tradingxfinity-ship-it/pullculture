@@ -17,7 +17,7 @@ export default function TopPulls() {
   return (
     <section
       id="top-pulls"
-      className="relative bg-magma-black py-20 lg:py-28 noise-overlay"
+      className="relative bg-magma-black py-20 lg:py-28 noise-overlay overflow-hidden"
     >
       <div className="mx-auto max-w-[1480px] px-6 lg:px-10">
         {/* Header */}

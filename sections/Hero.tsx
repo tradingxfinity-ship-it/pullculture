@@ -121,13 +121,13 @@ export default function Hero() {
           </div>
 
           {/* Right card */}
-          <div className="lg:col-span-5 relative h-[400px] sm:h-[460px] lg:h-full lg:min-h-[460px]">
+          <div className="lg:col-span-5 relative h-[460px] sm:h-[520px] lg:h-full lg:min-h-[460px]">
             {/* Branded box silhouette behind card */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, delay: 0.6 }}
-              className="absolute left-4 sm:left-10 lg:-left-16 xl:-left-24 bottom-0 lg:bottom-2 w-[60%] sm:w-[55%] lg:w-[62%] aspect-[4/3] z-10"
+              className="absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:-left-16 xl:-left-24 bottom-0 lg:bottom-2 w-[65%] sm:w-[55%] lg:w-[62%] aspect-[4/3] z-10"
               style={{
                 background:
                   "linear-gradient(225deg, #1a1a1a 0%, #050505 60%, #0a0a0a 100%)",
@@ -149,7 +149,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute -left-4 sm:-left-8 lg:-left-28 xl:-left-40 top-4 sm:top-2 lg:top-0 w-[280px] sm:w-[340px] lg:w-[420px] xl:w-[480px] z-20"
+              className="absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-auto lg:-left-28 xl:-left-40 top-4 sm:top-2 lg:top-0 w-[260px] sm:w-[320px] lg:w-[420px] xl:w-[480px] z-20"
               style={{
                 perspective: "800px",
                 perspectiveOrigin: "30% 40%",

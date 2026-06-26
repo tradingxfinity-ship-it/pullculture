@@ -9,10 +9,12 @@ export default function ContentGrid() {
   return (
     <section className="relative bg-magma-black py-20 lg:py-28">
       <div className="mx-auto max-w-[1480px] px-6 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
           <LatestNewsColumn />
           <MarketTrendsColumn />
-          <FeaturedStoryColumn />
+          <div className="md:col-span-2 lg:col-span-1">
+            <FeaturedStoryColumn />
+          </div>
         </div>
       </div>
     </section>
@@ -166,46 +168,49 @@ function FeaturedStoryColumn() {
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, delay: 0.2 }}
       id="features"
-      className="group relative bg-magma-dark/50 border border-white/[0.06] rounded-2xl overflow-hidden flex flex-col hover:border-white/20 transition-colors duration-500"
+      className="group relative bg-magma-dark/50 border border-white/[0.06] rounded-2xl overflow-hidden flex flex-col hover:border-white/20 transition-colors duration-500 h-full"
     >
       <div className="p-6 lg:p-8 pb-0">
         <SectionHeader title="Featured Story" tag="Editorial" />
       </div>
 
-      <div className="relative mx-6 lg:mx-8 mt-6 aspect-[4/3] rounded-xl overflow-hidden ring-1 ring-white/5">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/image.webp"
-          alt="Featured story"
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-magma-black/90 via-magma-black/20 to-transparent" />
-        <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 rounded-full bg-magma-black/70 backdrop-blur-sm border border-white/10 eyebrow text-[10px] text-white">
-            Long Read · 12 min
-          </span>
-        </div>
-      </div>
-
-      <div className="p-6 lg:p-8 pt-6 flex-1 flex flex-col">
-        <h3 className="text-[22px] lg:text-[26px] font-black leading-[1.15] tracking-tight text-white">
-          The $12.M Magma Founder Card: Inside the Most Expensive Modern Sale in
-          Hobby History
-        </h3>
-        <p className="text-magma-light text-[13px] leading-relaxed mt-4">
-          How a single PSA 10 rookie redefined modern grading economics, what
-          the auction floor whispered, and why the next era is already here.
-        </p>
-
-        <div className="mt-auto pt-6 flex items-center justify-between">
-          <span className="text-[12px] tracking-[0.18em] uppercase font-bold link-underline">
-            Read Feature
-          </span>
-          <ArrowRight
-            className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1"
-            strokeWidth={1.5}
+      {/* Tablet: side-by-side; Mobile/Desktop: stacked */}
+      <div className="flex flex-col md:flex-row lg:flex-col flex-1">
+        <div className="relative mx-6 lg:mx-8 mt-6 md:mt-6 md:ml-6 md:mr-0 md:mb-6 lg:ml-8 lg:mr-8 lg:mb-0 aspect-[4/3] md:aspect-auto md:w-[45%] lg:w-auto lg:aspect-[4/3] md:self-stretch rounded-xl overflow-hidden ring-1 ring-white/5 shrink-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/image.webp"
+            alt="Featured story"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-magma-black/90 via-magma-black/20 to-transparent" />
+          <div className="absolute top-4 left-4">
+            <span className="px-3 py-1 rounded-full bg-magma-black/70 backdrop-blur-sm border border-white/10 eyebrow text-[10px] text-white">
+              Long Read · 12 min
+            </span>
+          </div>
+        </div>
+
+        <div className="p-6 lg:p-8 pt-6 flex-1 flex flex-col">
+          <h3 className="text-[22px] lg:text-[26px] font-black leading-[1.15] tracking-tight text-white">
+            The $12M Pullculture Founder Card: Inside the Most Expensive Modern
+            Sale in Hobby History
+          </h3>
+          <p className="text-magma-light text-[13px] leading-relaxed mt-4">
+            How a single PSA 10 rookie redefined modern grading economics, what
+            the auction floor whispered, and why the next era is already here.
+          </p>
+
+          <div className="mt-auto pt-6 flex items-center justify-between">
+            <span className="text-[12px] tracking-[0.18em] uppercase font-bold link-underline">
+              Read Feature
+            </span>
+            <ArrowRight
+              className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1"
+              strokeWidth={1.5}
+            />
+          </div>
         </div>
       </div>
     </motion.a>
